@@ -1,0 +1,221 @@
+@font-face {
+  font-family: inconsolata;
+  font-weight: 400;
+  src: url(./fonts/inconsolata/static/Inconsolata-Regular.ttf);
+}
+@font-face {
+  font-family: inconsolata;
+  font-weight: 700;
+  src: url(./fonts/inconsolata/static/Inconsolata-Bold.ttf);
+}
+@font-face {
+  font-family: inter;
+  font-weight: 400;
+  src: url(./fonts/inter/static/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: inter;
+  font-weight: 700;
+  src: url(./fonts/inter/static/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: lora;
+  font-weight: 400;
+  src: url(./fonts/lora/static/Lora-Regular.ttf);
+}
+@font-face {
+  font-family: lora;
+  font-weight: 700;
+  src: url(./fonts/lora/static/Lora-Bold.ttf);
+}
+@font-face {
+  font-family: lora;
+  font-style: italic;
+  font-weight: 800;
+  src: url(./fonts/lora/static/Lora-BoldItalic.ttf);
+}
+
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  --background-color: #fff;
+  --search-background: #f4f4f4;
+  --title-color: #2d2d2d;
+  --text-color: #050505;
+
+  --subtitle: #757575;
+  --primary-color: #a445ed;
+  --warning-color: #ff5252;
+
+  --font-familly: inter;
+}
+
+/* https://www.youtube.com/watch?v=sy-rRtT84CQ&ab_channel=CodeComplete 
+https://www.youtube.com/watch?v=Uz35Qiia84g&ab_channel=CodeBlessYou*/
+
+[data-theme="dark"] {
+  --background-color: #050505;
+  --search-background: #1f1f1f;
+  --text-color: #fff;
+}
+[data-theme="serif"] {
+  --font-familly: Lora;
+}
+[data-theme="mono"] {
+  --font-familly: inconsolata;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* ********* TYPO **********   */
+
+h1 {
+  font-family: var(--font-familly);
+  font-weight: 700;
+  color: var(--title-color);
+  font-size: 6.4rem;
+  line-height: 7.7rem;
+}
+h2 {
+  font-family: var(--font-familly);
+  font-weight: 700;
+  color: var(--text-color);
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  font-style: italic;
+
+}
+h3 {
+  font-family: var(--font-familly);
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+p,
+li {
+  font-family: var(--font-familly);
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+h6 {
+  font-family: var(--font-familly);
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-decoration: underline;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* ********** General ********* */
+.app-container {
+  max-width: 74rem;
+  margin-inline: auto;
+}
+
+/* ********** Main ********* */
+
+.meanings-container {
+}
+
+.section {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+  margin-top: 4rem;
+}
+.section hr {
+  border: none;
+  border-bottom: solid 1px var(--subtitle);
+  width: 100%;
+  opacity: 0.3;
+}
+
+.bulet-point {
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  padding-left: 1.6rem;
+  gap: 3.2rem;
+  margin-bottom: 1rem;
+}
+.dot {
+  font-size: 0.5rem;
+}
+
+.synonyms {
+  color: var(--primary-color);
+  font-weight: 700;
+  padding-left: 2.4rem;
+}
+.example {
+  color: var(--subtitle);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ********** Utilities ********* */
+
+.u-subtitle {
+  color: var(--subtitle);
+  margin-bottom: 2.4rem;
+}
