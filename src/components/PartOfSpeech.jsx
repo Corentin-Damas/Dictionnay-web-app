@@ -28,7 +28,7 @@ function Meanings({ definitions }) {
     <li className="bulet-point" key={definition.definition}>
       <span className="dot">🟣</span>
       <div>
-        <p>{definition.definition}</p>
+        <p className="definition">{definition.definition}</p>
         {definition.example ?<q className="example">{definition.example}</q>: ""}
 
       </div>

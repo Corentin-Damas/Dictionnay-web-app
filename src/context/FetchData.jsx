@@ -24,19 +24,23 @@ function reducer(state, action) {
   }
 }
 
-function MyProvider({ children }) {
+function MyProvider({ search, children }) {
   const [{ wordData, isLoading, error }, dispatch] = useReducer(
     reducer,
     initialState
   );
+  console.log(search)
   useEffect(() => {
     async function getWordData() {
       dispatch({ type: "loading" });
       try {
         const res = await fetch(`http://localhost:9000/data`);
+        // const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`);
         if (!res.ok) throw Error("Failed getting data");
         const data = await res.json();
+        console.log(data)
         dispatch({ type: "wordData/loaded", payload: data });
+        // dispatch({ type: "wordData/loaded", payload: data[0] });
       } catch {
         dispatch({
           type: "rejected",
@@ -45,7 +49,7 @@ function MyProvider({ children }) {
       }
     }
     getWordData();
-  }, []);
+  }, [search]);
   return (
     <AppContext.Provider value={{ wordData, isLoading, error }}>
       {children}

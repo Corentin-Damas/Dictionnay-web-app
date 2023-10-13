@@ -5,9 +5,15 @@ function Footer() {
   const source = wordData.sourceUrls;
 
   return (
-    <div>
-      <h2>{source}</h2>;
-    </div>
+    <>
+      <hr className="section" />
+      <div className="source">
+        <p className="u-grey">Source</p>
+        <a href={source} target="_blank">
+          <h6>{source}</h6>
+        </a>
+      </div>
+    </>
   );
 }
 
