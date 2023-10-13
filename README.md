@@ -7,6 +7,16 @@ This is a solution to the [Dictionary web app challenge on Frontend Mentor](http
 
 ## Overview
 
+### State of the Project
+
+Desktop version ready
+
+- to do
+    - include audio
+    - ui for the font selection (not good in dark mode)
+    - Mobile version
+
+
 ### The challenge
 
 Users should be able to:
@@ -23,12 +33,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./results/whitemono.png)
+![](./results/darkmode.jpg)
 
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -36,8 +43,6 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
+- APi calls
 - [React](https://reactjs.org/) - JS library
 - React + Vite

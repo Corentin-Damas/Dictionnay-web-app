@@ -34,13 +34,13 @@ function MyProvider({ search, children }) {
     async function getWordData() {
       dispatch({ type: "loading" });
       try {
-        const res = await fetch(`http://localhost:9000/data`);
-        // const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`);
+
+        const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`);
         if (!res.ok) throw Error("Failed getting data");
         const data = await res.json();
         console.log(data)
-        dispatch({ type: "wordData/loaded", payload: data });
-        // dispatch({ type: "wordData/loaded", payload: data[0] });
+
+        dispatch({ type: "wordData/loaded", payload: data[0] });
       } catch {
         dispatch({
           type: "rejected",
